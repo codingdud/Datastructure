@@ -35,7 +35,7 @@ int enqueue(struct queue *queue, int data){
 }
 int dequeue(struct queue* queue){
     int data;
-    if(isempty(queue)) return -69;
+    if(isempty(queue)) return -666699999;
     data=queue->array[queue->front];
     queue->front=(queue->front+1)%queue->capacity;
     queue->size--;
@@ -45,5 +45,12 @@ int dequeue(struct queue* queue){
 
 int main()
 {
+    struct queue* queue=createqueue(5);
+    printf("%d",enqueue(queue,10));
+    printf("\n%d",enqueue(queue,111));
+    printf("\n%d",dequeue(queue));
+    printf("\n%d",dequeue(queue));
+    printf("\n%d",dequeue(queue));
+
     return 0;
 }
