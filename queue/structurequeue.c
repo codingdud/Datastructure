@@ -28,8 +28,8 @@ struct queue *createqueue(unsigned capacity)
 int enqueue(struct queue *queue, int data){
     if (isfull(queue))
         return 0;
-    if((queue->front+1)==queue->rear||(queue->rear+1)==queue->front)
-    return 0;    
+    /* if((queue->front+1)==queue->rear||(queue->rear+1)==queue->front)
+    return 0;  */   
     queue->rear = (queue->rear + 1) % queue->capacity;
     queue->array[queue->rear] = data;
     queue->size++;
